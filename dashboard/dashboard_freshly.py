@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from scipy.stats import gaussian_kde
+import os
 
 # =========================================
 # PAGE CONFIG
@@ -23,36 +24,38 @@ PALETTE = {
 # =========================================
 # LOAD SEMUA FILE CSV
 # =========================================
-@st.cache_data
+
+# Dapatkan direktori tempat script ini berada
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def load_all_csv():
     data = {}
     
     # BQ1
-    data['distribusi'] = pd.read_csv("distribusi_kematangan.csv")
-    data['class_composition'] = pd.read_csv("class_composition_percent.csv")
-    data['imbalance_ratio'] = pd.read_csv("imbalance_ratio.csv")
+    data['distribusi'] = pd.read_csv(os.path.join(SCRIPT_DIR, "distribusi_kematangan.csv"))
+    data['class_composition'] = pd.read_csv(os.path.join(SCRIPT_DIR, "class_composition_percent.csv"))
+    data['imbalance_ratio'] = pd.read_csv(os.path.join(SCRIPT_DIR, "imbalance_ratio.csv"))
     
     # BQ2
-    data['color_analysis'] = pd.read_csv("color_analysis.csv")
+    data['color_analysis'] = pd.read_csv(os.path.join(SCRIPT_DIR, "color_analysis.csv"))
     
     # BQ3
-    data['overlap_scores'] = pd.read_csv("overlap_score_pairs.csv")
-    data['overlap_visual'] = pd.read_csv("overlap_visualization_dataset.csv")
+    data['overlap_scores'] = pd.read_csv(os.path.join(SCRIPT_DIR, "overlap_score_pairs.csv"))
+    data['overlap_visual'] = pd.read_csv(os.path.join(SCRIPT_DIR, "overlap_visualization_dataset.csv"))
     
     # BQ4
-    data['fisher_scores'] = pd.read_csv("fisher_separability_score.csv")
-    data['scatter_features'] = pd.read_csv("scatter_visual_features.csv")
+    data['fisher_scores'] = pd.read_csv(os.path.join(SCRIPT_DIR, "fisher_separability_score.csv"))
+    data['scatter_features'] = pd.read_csv(os.path.join(SCRIPT_DIR, "scatter_visual_features.csv"))
     
     # BQ5
-    data['cleaning_summary'] = pd.read_csv("dataset_cleaning_summary.csv")
-    data['elimination_per_class'] = pd.read_csv("data_elimination_per_class.csv")
-    data['duplicate_per_class'] = pd.read_csv("duplicate_per_class.csv")
-    data['distribution_before_after'] = pd.read_csv("dataset_distribution_before_after_cleaning.csv")
+    data['cleaning_summary'] = pd.read_csv(os.path.join(SCRIPT_DIR, "dataset_cleaning_summary.csv"))
+    data['elimination_per_class'] = pd.read_csv(os.path.join(SCRIPT_DIR, "data_elimination_per_class.csv"))
+    data['duplicate_per_class'] = pd.read_csv(os.path.join(SCRIPT_DIR, "duplicate_per_class.csv"))
+    data['distribution_before_after'] = pd.read_csv(os.path.join(SCRIPT_DIR, "dataset_distribution_before_after_cleaning.csv"))
     
     return data
 
 data = load_all_csv()
-
 # =========================================
 # METRIKS UTAMA (dari cleaning_summary)
 # =========================================
