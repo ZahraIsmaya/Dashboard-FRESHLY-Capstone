@@ -1,0 +1,19 @@
+label,duplicate_count,category_type
+mango_rotten,107,Duplikat — Fruits
+mango_ripe,55,Duplikat — Fruits
+orange_unripe,28,Duplikat — Fruits
+orange_rotten,26,Duplikat — Fruits
+banana_unripe,23,Duplikat — Fruits
+orange_ripe,10,Duplikat — Fruits
+mango_unripe,6,Duplikat — Fruits
+banana_ripe,1,Duplikat — Fruits
+banana_rotten,1,Duplikat — Fruits
+paprika_rotten,225,Duplikat — Vegetables
+paprika_ripe,83,Duplikat — Vegetables
+tomato_unripe,77,Duplikat — Vegetables
+chili_ripe,71,Duplikat — Vegetables
+paprika_unripe,62,Duplikat — Vegetables
+tomato_ripe,50,Duplikat — Vegetables
+tomato_rotten,21,Duplikat — Vegetables
+chili_rotten,13,Duplikat — Vegetables
+chili_unripe,10,Duplikat — Vegetables

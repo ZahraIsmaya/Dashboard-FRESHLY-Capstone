@@ -1,0 +1,11 @@
+Feature,ripe vs unripe,ripe vs rotten,unripe vs rotten,Avg Score
+gr_ratio,0.61,0.279,0.335,0.408
+hue_std,0.315,0.043,0.277,0.212
+sat_std,0.256,0.202,0.059,0.172
+sat_mean,0.1,0.257,0.153,0.17
+green_mean,0.175,0.194,0.007,0.125
+red_mean,0.094,0.059,0.161,0.105
+val_mean,0.054,0.07,0.13,0.085
+hue_mean,0.034,0.068,0.099,0.067
+lbp_std,0.033,0.041,0.073,0.049
+lbp_mean,0.0,0.0,0.0,0.0
