@@ -1,1 +1,1 @@
-shboard-freshly-capstone.streamlit.app
+dashboard-freshly-capstone.streamlit.app
